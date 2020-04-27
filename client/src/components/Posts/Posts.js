@@ -1,8 +1,8 @@
 import React from 'react'
 import Post from '../Post/Post'
-import axios from 'axios';
+import axios from 'axios'
 import './Posts.css'
-
+import { trackPromise } from 'react-promise-tracker';
 export default class Posts extends React.Component {
 
     state = {
@@ -13,17 +13,21 @@ export default class Posts extends React.Component {
     componentDidMount() {
 
         this.getData()
-            
+
     }
 
     getData = () => {
 
-       axios
-            .get("https://blog-app-server1.herokuapp.com/api")
-            .then(data => {
-                this.setState({ posts: data.data })
-            })
-            .catch(err => { console.log(err); return null; });
+        trackPromise(
+
+            axios
+                .get("https://blog-app-server1.herokuapp.com/api")
+                .then(data => {
+
+                    this.setState({ posts: data.data })
+                })
+                .catch(err => { console.log(err); return null; }),
+        )
     };
 
 
