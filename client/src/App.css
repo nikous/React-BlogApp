@@ -1,0 +1,12 @@
+html,body{
+  
+    margin: 0;
+    height: 100vh;
+}
+
+.AppContainer{
+    height: 100%;
+    width: inherit;
+    background-color:white;
+
+}
