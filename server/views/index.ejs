@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/2ccfb1ce14.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="side-cont">
+        <a class="as" href="/logout"><i class="fas fa-sign-out-alt fa-3x fa-rotate-180"></i></a>
+    </div>
+    <div class="inputForm">
+
+        <form action="/sendData" method="POST" id="form" class="form">
+
+            <div class="title-cont">
+                <input class="title" name="title" placeholder="Add Title.." />
+            </div>
+            <div class="text-cont">
+                <input class="text" name="text" placeholder="Add Text..." />
+            </div>
+            <div class="description-cont">
+                <input class="description" name="description" placeholder="Add Description..." maxlength="187"
+                    minlength="187" />
+            </div>
+            <div class="image-cont">
+                <input class="image" name="image" placeholder="Add image link..." />
+            </div>
+            <div class="submitBtn-cont">
+                <button class="submitBtn">Post it</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
