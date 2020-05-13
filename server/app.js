@@ -43,6 +43,14 @@ const PORT = process.env.PORT || 1200;
 
 const Mongoclient = require('mongodb').MongoClient;
 
+var minutes = 25, the_interval = minutes * 60 * 1000; //Define in how many minutes you want interval to run 
+
+
+// Loop running every 5 minutes and call Apis
+setInterval(function () {
+    console.log("wake up Heroku")
+}, the_interval);
+
 mongoose
 
     .connect(db, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
